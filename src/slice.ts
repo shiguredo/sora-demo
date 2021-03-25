@@ -681,6 +681,9 @@ function createConnectOptions(
   if (pickedState.enabledClientId) {
     connectionOptions.clientId = pickedState.clientId;
   }
+  if (process.env.NEXT_PUBLIC_KOHAKU_URL) {
+    connectionOptions.kohakuURL = process.env.NEXT_PUBLIC_KOHAKU_URL;
+  }
   return connectionOptions;
 }
 
